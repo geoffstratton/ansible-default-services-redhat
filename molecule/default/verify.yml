@@ -1,0 +1,18 @@
+---
+- name: Verify
+  hosts: all
+
+  tasks:
+    - name: Gather service facts
+      service_facts:
+
+    - name: Verify that services are disabled
+      assert:
+        that: "ansible_facts.services['{{ item }}'] is not defined or ansible_facts.services['{{ item }}'].status == 'disabled'"
+      with_items:
+        - rpcbind.service
+        - ntpdate.service
+        - rsyncd.service
+        - postfix.service
+        - saslauthd.service
+        - psacct.service

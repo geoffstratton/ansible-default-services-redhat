@@ -1,0 +1,47 @@
+---
+disabled_services:
+  - abrt-ccpp.service
+  - abrt-oops.service
+  - abrt-pstoreoops.service
+  - abrtd.service
+  - arp-ethers.service
+  - blk-availability.service
+  - cgconfig.service
+  - cgred.service
+  - chrony-wait.service
+  - chronyd.service
+  - console-getty.service
+  - console-shell.service
+  - cpupower.service
+  - debug-shell.service
+  - dnsmasq.service
+  - ebtables.service
+  - firewalld.service
+  - gssproxy.service
+  - iprdump.service
+  - iprinit.service
+  - iprupdate.service
+  - kpatch.service
+  - nfs-blkmap.service
+  - nfs-rquotad.service
+  - nfs-server.service
+  - nfs.service
+  - nscd.service
+  - ntpdate.service
+  - postfix.service
+  - psacct.service
+  - rdisc.service
+  - rdma.service
+  - rhnsd.service
+  - rhsm-facts.service
+  - rhsm.service
+  - rpc-rquotad.service
+  - rpcbind.service
+  - rpc-rquotad.service
+  - rpcbind.service
+  - rsyncd.service
+  - saslauthd.service
+  # - serial-getty@.service
+  - svnserve.service
+  - tcsd.service
+  - wpa_supplicant.service

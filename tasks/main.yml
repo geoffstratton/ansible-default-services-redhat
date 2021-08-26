@@ -1,0 +1,18 @@
+---
+- name: Disable unwanted services
+  service:
+    name: "{{ item }}"
+    state: stopped
+    enabled: no
+  with_items: "{{ disabled_services }}"
+  register: service_result
+  failed_when: "service_result is failed and 'Could not find the requested service' not in service_result.msg"
+  tags:
+    - default_services
+
+- name: Workaround for serial-getty@ bug - https://github.com/ansible/ansible/issues/69144
+  systemd:
+    name: serial-getty@
+    state: stopped
+    enabled: no
+  failed_when: no
